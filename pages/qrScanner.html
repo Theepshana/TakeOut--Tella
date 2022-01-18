@@ -24,8 +24,12 @@
           ></video>
         </div>
         <div class="skip-button-section">
-          <button class="ui-btn qr-scaner-skip-button" type="button">
-            Skip
+          <button
+            class="ui-btn qr-scaner-skip-button"
+            type="button"
+            onclick="handleClose()"
+          >
+            Close
           </button>
         </div>
       </div>
@@ -41,9 +45,10 @@
           value: content,
         };
         let obj_serialized = JSON.stringify(discountArray);
-        sessionStorage.setItem("customerDiscount", obj_serialized);
+        localStorage.setItem("customerDiscount", obj_serialized);
+        console.log("localStorage", localStorage);
         setTimeout(function () {
-          window.location.href = "./userVoucher.html";
+          location.href = "./home.html";
         }, 1000);
       });
       Instascan.Camera.getCameras()
@@ -57,6 +62,10 @@
         .catch(function (e) {
           console.log(e);
         });
+
+      function handleClose() {
+        location.href = "./home.html";
+      }
     </script>
   </body>
 </html>
