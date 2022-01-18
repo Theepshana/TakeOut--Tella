@@ -83,6 +83,8 @@
             // var numValp = Number(document.getElementById("price").value);
             var points = (numValp / 100) * 2
             alert("Congradulations! You have received " + points + " points");
+            var numValNewP = Number(localStorage.getItem("points")) + points;
+            localStorage.setItem("points", numValNewP)
 
 
         }

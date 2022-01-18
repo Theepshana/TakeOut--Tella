@@ -1,121 +1,154 @@
 <!DOCTYPE html>
 <html>
-      <head>
-            <title>TakeOut Tella</title>
-            <meta name = "viewport" content = "width = device-width, initial-scale = 1">
-            <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
-            <script src = "https://code.jquery.com/mobile/1.4.8/jquery.mobile-1.4.8.min.js"></script>
-            <link rel="stylesheet" href="../css/Main.css">
-            <link rel = "stylesheet" 
-           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-            <script src="JS/Main.js"></script>
-            <style>            
-                @media all and (min-width: 23.4375em) {
-                .my-breakpoint.ui-grid-a .ui-block-a {
-                    width: 590px;
-                    height: 400px;
-                }
-    
-                .my-breakpoint.ui-grid-a .ui-block-b {
-                    width: 375px;
-                    height: 360px;
-                }
-            }
-    
-            @media all and (min-width: 48em) {
-                .my-breakpoint.ui-grid-a .ui-block-a {
-                    width: 900px;
-                    height: 550px;
-                }
-    
-                .my-breakpoint.ui-grid-a .ui-block-b {
-                    width: 400px;
-                    height: 450px;
-                }
-            }
-    
-            @media all and (min-width: 50.75em) {
-                .my-breakpoint.ui-grid-a .ui-block-a {
-                    width: 812px;
-                    height: 400px;
-                }
-    
-                .my-breakpoint.ui-grid-a .ui-block-b {
-                    width: 812px;
-                    height: 400px;
-                }
-            }
-    
-            @media all and (min-width: 64em) {
-                .my-breakpoint.ui-grid-a .ui-block-a {
-                    width: 1024px;
-                    height: 370px;
-                }
-    
-                .my-breakpoint.ui-grid-a .ui-block-b {
-                    width: 400px;
-                    height: 468px;
-                }
-            }
-            </style>
-      </head>
-      <body class="bg">
-        <div data-role="page" id ="intro-1">
-            <div data-role="main" class="main">
-                <div>
-                    <a onclick="location.href ='./profilePage.html';" style="background: none;">
-                    <img src='../image/Group.png'/>
-                    </a>
-                    </button>
-                  </div>
-                <br>
-                <div class="menu-profile" >
-                <a href="">
-     
-                    <img src="../image/yourFavBtn.png" style="margin-bottom: -20%; padding-top: -60%;" >
-                  
-                 </a>
-                </div>
-                 <div class="menu-profile" >
-                 <a onclick="location.href ='./userVoucher.html';" style="background: none;">
-     
-                    <img src="../image/loyaltyRewards.png" style="margin-bottom: -20%;">
-                  
-                 </a>
-                </div>
-                <div class="menu-profile" >
-                 <a onclick="location.href ='./MemberPage.html';" style="background: none;">
-     
-                    <img src="../image/memberDetail.png" style="margin-bottom: -20%; ">
-                  
-                 </a>
-                </div>
-                <div class="menu-profile" >
-                 <a href="">
-     
-                    <img src="../image/accountSetting.png" style="margin-bottom: -20%;">
-                  
-                 </a>
-                </div>
-                <div class="menu-profile" >
-                 <a href="">
-     
-                    <img src="../image/feedbackBtn.png" style="margin-bottom: -20%;">
-                  
-                 </a>
-                </div>
-                <div class="menu-profile" >
-                 <a onclick="location.href ='./finalPage.html';" style="background: none;">
-     
-                    <img src="../image/signOutBtn.png" style="margin-bottom: -20%;">
-                  
-                 </a>
-                </div>
 
-                  
-            </div>
-            
-      </div>
+<head>
+    <title>TakeOut Tella</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.8/jquery.mobile-1.4.8.min.js"></script>
+    <link rel="stylesheet" href="../css/Main.css">
+    <link rel="stylesheet" href="../css/omarStytle.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="JS/Main.js"></script>
+    <style>
+        @media all and (min-width: 23.4375em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 590px;
+                height: 400px;
+            }
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 375px;
+                height: 360px;
+            }
+        }
         
-      </body>
+        @media all and (min-width: 48em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 900px;
+                height: 550px;
+            }
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 400px;
+                height: 450px;
+            }
+        }
+        
+        @media all and (min-width: 50.75em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 812px;
+                height: 400px;
+            }
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 812px;
+                height: 400px;
+            }
+        }
+        
+        @media all and (min-width: 64em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 1024px;
+                height: 370px;
+            }
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 400px;
+                height: 468px;
+            }
+        }
+    </style>
+</head>
+
+<body class="ui-body-b ui-body">
+    <div data-role="page" id="intro-1">
+
+
+        <div data-role="header" class="ui-page-header-fixed">
+
+
+        </div>
+        <!-- /header -->
+        <div data-role="main" class="main">
+            <div>
+                <a onclick="location.href ='./home.html';" style="background: none; ">
+                    <img src='../image/Group.png' style=" margin-bottom: -15%;" />
+                </a>
+                </button>
+            </div>
+            <br>
+            <div class="menu-profile">
+                <a href="../ziran/Favourites.html">
+
+                    <img src="../image/yourFavBtn.png" style="margin-bottom: -20%; padding-top: -60%;">
+
+                </a>
+            </div>
+            <div class="menu-profile">
+                <a onclick="location.href ='./userVoucher.html';" style="background: none;">
+
+                    <img src="../image/loyaltyRewards.png" style="margin-bottom: -20%;">
+
+                </a>
+            </div>
+            <div class="menu-profile">
+                <a onclick="location.href ='./MemberPage.html';" style="background: none;">
+
+                    <img src="../image/memberDetail.png" style="margin-bottom: -20%; ">
+
+                </a>
+            </div>
+            <div class="menu-profile">
+                <a href="">
+
+                    <img src="../image/accountSetting.png" style="margin-bottom: -20%;">
+
+                </a>
+            </div>
+            <div class="menu-profile">
+                <a href="./systemFeedBack.html">
+
+                    <img src="../image/feedbackBtn.png" style="margin-bottom: -20%;">
+
+                </a>
+            </div>
+            <div class="menu-profile">
+                <a onclick="location.href ='./s3finalPage.html';" style="background: none;">
+
+                    <img src="../image/signOutBtn.png" style="margin-bottom: -20%;">
+
+                </a>
+            </div>
+            <div class="navigation">
+                <div data-role="navbar" id="navigation-bar" data-position="fixed" class="nav-bar">
+                    <div id="hamburger-icon" class="hamburger-nav-icon">
+                        <img src="../Image/navIcon.png" onclick="handleHamburger()" />
+                    </div>
+                    <ul class="nav-image-list">
+                        <li>
+                            <div id="home" class="common-icon-style icon-selected">
+                                <img src="../Image/Home.png" class="home-icon" style="float: left" onclick="selectedNavOption('home')" />
+                                <small id="home-label" class="selected-icon-badge">Home</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="profile" class="common-icon-style">
+                                <img src="../Image/Profile.png" class="profile-icon" style="float: left" onclick="selectedNavOption('profile')" />
+                                <small id="profile-label" class="icon-badge">Profile</small>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="cart" class="common-icon-style">
+                                <img src="../Image/Buy.png" class="cart-icon" style="float: left" onclick="selectedNavOption('cart')" />
+                                <small id="cart-label" class="icon-badge">Cart</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
 </html>

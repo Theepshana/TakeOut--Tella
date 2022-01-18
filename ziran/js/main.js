@@ -128,6 +128,7 @@ function sendEmail() {
 
     .then(function(message) {
         alert("Your Favourites Shared Successfully!!!")
+        window.location.href = "../pages/s5shareFavSucess.html";
     });
 
 

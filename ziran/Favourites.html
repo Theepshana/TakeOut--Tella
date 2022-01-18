@@ -60,7 +60,39 @@
     </style>
 </head>
 
-<body class="bg">
+<body class="bg" onload="addFav()">
+    <script>
+        function addFav() {
+
+            if (Number(localStorage.getItem("favFlag")) > 0) {
+
+                document.getElementById("addFav").innerHTML +=
+                    "  <div class='menu-tiles-section'>" +
+                    "             <div class='menu-tiles ui-block-a'>" +
+                    "                <div class='menu-details ui-grid-b'>" +
+                    "                    <img src='assets/images/food1.png' class='menu-image ui-block-a' style='width:29%; padding: 5px;'>" +
+                    "                    <div class='menu-content ui-block-b'>" +
+                    "                        <p class='food-name'>Shrimp Submarine</p>" +
+                    "                   </div>" +
+
+
+                    "           <div class='menu-price ui-block-c'>" +
+                    "                    <p>" +
+                    "  <span class='menu-price'>LKR 690</span> </p>" +
+                    "  </div>" +
+                    " <div>" +
+                    "   <input type='checkbox' class='checkbox' name='languages' id='ex2-check1' />" +
+                    "  <label for='ex2-check1'>" +
+
+                    "    </label>" +
+                    "                </div>" +
+                    "            </div>" +
+                    "       </div>" +
+                    "   </div>";
+
+            }
+        }
+    </script>
     <img class="Pattern" src="assets/images/Pattern.png" width="100%" />
 
     <div data-role="page" id="bioDet">
@@ -106,29 +138,7 @@
                         Select All
                     </h3>
                     <div class="center-alignment">
-                        <div class="menu-tiles-section">
-                            <div class="menu-tiles ui-block-a">
-                                <div class="menu-details ui-grid-b">
-                                    <img src="assets/images/food1.png" class="menu-image ui-block-a" style="width:29%; padding: 5px;">
-                                    <div class="menu-content ui-block-b">
-                                        <p class="food-name">Shrimp Submarine</p>
-                                    </div>
-
-
-                                    <div class="menu-price ui-block-c">
-                                        <p>
-                                            <span class="menu-price">LKR 690</span>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" class='checkbox' name="languages" id="ex2-check1" />
-                                        <label for="ex2-check1">
-                               
-                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="addFav"></div>
                         <div class="center-alignment">
                             <div class="menu-tiles-section">
                                 <div class="menu-tiles-1 ui-block-a">

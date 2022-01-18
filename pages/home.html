@@ -8,23 +8,19 @@
         <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" media="all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait)" href="../css/ipad-portrait.css" />
-        <link rel="stylesheet" media="all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape)" href="../css/ipad-landscape.css" />
         <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <script src="https://kit.fontawesome.com/ec5c950466.js" crossorigin="anonymous"></script>
     </head>
     <body class="ui-body-b ui-body">
 
-        <div data-role="page" class="ui-page ui-page-theme-b ui-page-active" style="background-color: #0D0D0D;">
+        <div data-role="page" class="ui-page ui-page-theme-a ui-page-active">
         
             <div data-role="header" class="ui-page-header-fixed">
                 <div class="header-pg ui-grid-a">
-                    <div class="header-pg ui-block-a">
-                        <div class="ui-bar ui-bar-b" style="height:80px">Top Picks Near you</div>
-                    </div>
+                    <div class="header-pg ui-block-a"><div class="ui-bar ui-bar-b" style="height:80px">Top Picks Near you</div></div>
                     <div class="header-pg ui-block-b">
-                        <div class="ui-bar ui-bar-b">
-                            <img src="../Image/notification.png" id="notificationImg">
+                        <div class="ui-bar ui-bar-b" style="height:80px">
+                            <img src="../Image/notification.png" style="width:110%;padding-top: 20px;">
                             </i>
                         </div>
                     </div>
@@ -35,12 +31,14 @@
                     </div>
                     <div class="header-pg ui-block-b">
                         <div class="ui-bar ui-bar-b">
+                            <a onclick="location.href='./filterPage1.html';" style="background: none; margin-left: -30px; margin-top: -5px;">
                             <img src="../Image/filterButton.png" style="margin-right: 3px;">
+                        </a>
                             </i>
                         </div>
                     </div>
                     <!-- <img src="../Image/search.png" style="width:80%; padding: 0px 0px 20px 40px;"> -->
-                    
+
                 </div>
             </div><!-- /header -->
         
@@ -60,7 +58,7 @@
                         </div>
                         <div class="food-tiles">
                             <div class="food-details">
-                                <img src="../Image/submore.png" style="width:50%; padding-top: 20px;">
+                                <img src="../Image/mummysdelight.png" style="width:50%; padding-top: 20px;">
                                 <p class="food-maker">SubMore</p>
                                 <p style="margin: 5px 0;">
                                     <span class="food-price">8 Mins</span>
@@ -98,11 +96,11 @@
                 </div>
                 <div class="food-categories" style="padding-top: 20px;">
                     <p class="food-category-section"> <span class="food-category-header ui-block-a"> Popular Menu </span>
-                    <a href=""  class="float-right ui-block-b"><button class="view-all-btn">View More</button></a></p>
+                    <a href="./restaurant.html" target="_self" class="float-right ui-block-b"><button class="view-all-btn">View More</button></a></p>
                     <div class="menu-tiles-section">
                         <div class="menu-tiles ui-block-a">
-                            <div class="menu-details ui-grid-b" style="height: fit-content;">
-                                <img src="../Image/doughnut.jpeg" class="menu-image ui-block-a" style="height: 50%; padding: 5px;">
+                            <div class="menu-details ui-grid-b">
+                                <img src="../Image/doughnut.jpeg" class="menu-image ui-block-a" style="width:29%; padding: 5px;">
                                 <div class="menu-content ui-block-b">
                                     <p class="food-maker">Double Chocolate</p>
                                 </div>
@@ -114,8 +112,8 @@
                             </div>
                         </div>
                         <div class="menu-tiles ui-block-a">
-                            <div class="menu-details ui-grid-b" style="height: fit-content;">
-                                <img src="../Image/submarine.jpg" class="menu-image ui-block-a" style="height: 50%; padding: 5px;">
+                            <div class="menu-details ui-grid-b">
+                                <img src="../Image/submarine.jpg" class="menu-image ui-block-a" style="width:29%; padding: 5px;">
                                 <div class="menu-content ui-block-b">
                                     <p class="food-maker">Shrimp Submarine</p>
                                 </div>
@@ -127,8 +125,8 @@
                             </div>
                         </div>
                         <div class="menu-tiles ui-block-a">
-                            <div class="menu-details ui-grid-b" style="height: fit-content;">
-                                <img src="../Image/submarine.jpg" class="menu-image ui-block-a" style="height: 50%; padding: 5px;">
+                            <div class="menu-details ui-grid-b">
+                                <img src="../Image/submarine.jpg" class="menu-image ui-block-a" style="width:29%; padding: 5px;">
                                 <div class="menu-content ui-block-b">
                                     <p class="food-maker">Chicken Submarine</p>
                                 </div>

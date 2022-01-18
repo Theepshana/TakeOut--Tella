@@ -59,7 +59,7 @@
 <body class="bg">
     <img src="assets/images/Pattern.png" width="100%" />
 
-    <div data-role="page" id="bioDet">
+    <div data-role="page" id="booking">
         <div data-role="main" class="ui-content container-2">
             <a href="CheckoutPayment.html" data-rel="back" class="back-icon"><img src="./assets/images/back.png" /></a>
 
@@ -75,11 +75,11 @@
                     <h4 class="center-alignment" style="font-family: 'poppins'; font-size: 18px;margin: 10px;color: grey;">Total Amount - LKR</h4>
                     <input class="food-checkout " id="total_value" name="total_value" type="text" value="550.00">
                     <br>
-                    <a href="Favourites.html">
-                        <button class="Purchase" id="customButton">Purchase</button>
-                    </a>
-                    <a href="CheckoutPayment.html">
-                        <button class="cancel">Cancel</button>
+
+                    <button class="Purchase" id="customButton">Purchase</button>
+
+                    <a href="../pages/s2orderPlaceSuccess.html" target="_self">
+                        <button type="submit" class="cancel">Cancel</button>
                     </a>
                 </form>
 
@@ -117,12 +117,15 @@
                                 amount: $('#total_value').val() * 100
                             });
                             e.preventDefault();
+
                         });
+
 
                         // Code Section C  Close Checkout on page navigation
                         $(window).on('popstate', function() {
                             handler.close();
                         });
+
                     });
                 </script>
 

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/omarStytle.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+    <script src="../assets/script.js"></script>
+    <script src="../assets/instascan.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://use.fontawesome.com/fe459689b4.js"></script>
+</head>
+
+<body>
+    <script>
+        localStorage.setItem("favFlag", 0);
+
+        function addFav() {
+            var flag = Number(localStorage.getItem("favFlag")) + 1;
+            localStorage.setItem("favFlag", flag)
+            alert("Added to favourites")
+            window.location.href = "../ziran/favourites.html";
+        }
+
+        function removeFav() {
+            var flag = Number(localStorage.getItem("favFlag")) - 1;
+            localStorage.setItem("favFlag", 0)
+            alert("Removed from favourites")
+            window.location.href = "../ziran/favourites.html";
+        }
+    </script>
+    <style>
+        body {
+            margin: 40px;
+        }
+        
+        .btn {
+            cursor: pointer;
+            outline: 0;
+            border-radius: 15px;
+        }
+        
+        .btn:focus {
+            outline: none;
+        }
+        
+        .green {
+            color: green;
+        }
+        
+        .red {
+            color: red;
+        }
+    </style>
+
+    <div data-role="page" id="detailed-product">
+        <div data-role="main" class="ui-content image">
+            <img src="../icons/backIcon.png" onclick="closeDetails()" />
+            <div id="content" class="content" onclick="openDetails()">
+                <div>
+                    <div class="ui-grid-a" style="margin-top: 3.5rem">
+                        <div class="ui-block-a">
+                            <div style="padding-left: 1rem">
+                                <img src="../icons/PopularStatus.png" />
+                            </div>
+                        </div>
+
+                        <div class="ui-block-b">
+                            <div class="content-icons">
+
+                                <button onclick="addFav()" class="btn" id="green" style="width: 38px;height: 38px; background-color: #0d0d0d; color:#15be77; border: none; float: left;"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></button>                                &nbsp
+                                <button onclick="removeFav()" class="btn" id="red" style="width: 38px;height: 38px; background-color: #0d0d0d; color:red;border: none; float:right;"><i class=" fa fa-thumbs-down fa-lg" aria-hidden="true "></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-body ui-body-a ui-corner-all product-description-container">
+                        <h4>Shrimp Submarine</h4>
+                        <div class="rating-content">
+                            <img class="rating-star-icon" src="../icons/ratingStar.png" />
+                            <span class="rating-number">4.8 Rating</span>
+                            <img class="sales-icon" src="../icons/shoppingBag.png" />
+                            <span class="sales-number">2000+ Orders</span>
+                        </div>
+                        <div class="product-description">
+                            The success of the unique recipes of SubMore propelled it to become the first Sri Lankan origin international fast food restaurant chain. So much for so little, it`s Chicken submarine bun varieties are a firm favourite. The restaurant captured the hearts
+                            of the Colombo fast food Lovers and became a favourite dining location for many. The ShrimpWhopper takes an original Whopper minus the ketchup and adds a layer of whole shrimpand a spicy tomato sauce, details Brand Eating.
+                        </div>
+                        <div class="commnents-section">
+                            <h5>Comments</h5>
+                            <div class="individual-comments-container">
+                                <div class="comments-image-container" style="float: left">
+                                    <img src="../icons/profPhoto.png" />
+                                </div>
+                                <div class="comments-reply-container" style="float: left">
+                                    <div class="commenter-name-section">
+                                        <h5>Dianne Russell</h5>
+                                        <span class="date-area">12 Dec 2021</span>
+                                    </div>
+                                    <div class="customer-reply">
+                                        <span style="font-size: 10px">
+                        This Is great, So delicious ! I really loved it...
+                      </span>
+                                    </div>
+                                    <div id="display-user-reply" class="user-input">
+                                        <a href="#popupComment" data-rel="popup" data-position-to="window" data-transition="pop" style="text-decoration: none">
+                                            <img style="width: 15px; height: 15px" src="../icons/editIcon.png" />
+                                        </a>
+                                        <small>......</small>
+                                    </div>
+                                    <div id="user-input-reply"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-to-cart-button-section">
+                    <a href="../ziran/OrderDetails.html" target="_self">
+                        <button class="ui-btn add-to-cart">Add To Cart</button>
+                    </a>
+                </div>
+            </div>
+
+            <div data-role="popup" id="popupComment" data-theme="a" class="ui-corner-all">
+                <div style="padding: 10px 20px">
+                    <input id="reply-field" type="text" data-theme="a" placeholder="Reply..." />
+                    <a data-rel="back">
+                        <button id="reply-post-button" type="submit" class="ui-btn ui-corner-all post-button">
+                Post
+              </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openDetails() {
+            document.getElementById("content").className = "clicked-content-style";
+        }
+
+        function closeDetails() {
+            document.getElementById("content").className = "content";
+        }
+
+        $("#reply-post-button").on("click", function() {
+            var replyPost = $("#reply-field").val();
+            if (replyPost.length > 0) {
+                $("#display-user-reply").hide();
+                $("#user-input-reply").html(
+                    `
+				<div class="user-input">
+					<span  style="font-size: 13px;"> ` +
+                    replyPost +
+                    ` </span>
+					<a href="#popupComment" data-rel="popup" data-position-to="window" data-transition="pop" style="text-decoration: none"> 
+					<img src="../icons/editPostIcon.png" class="edit-post-icon" /> </a>
+				</div>
+            `
+                );
+            }
+        });
+    </script>
+</body>
+
+</html>

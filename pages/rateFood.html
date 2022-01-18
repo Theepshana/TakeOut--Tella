@@ -16,47 +16,76 @@
     <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <script src="https://kit.fontawesome.com/ec5c950466.js" crossorigin="anonymous"></script>
+   
+    
+  </head>
+  <body class="bg" data-theme="b" style="background-color: #0D0D0D;" onload="start()" >
     <script>
-        function first() {
-        var y = 0;
-        var z = 1;
-        var x = +y + +z;
-        document.getElementById("demo").innerHTML = x;
+         function one() { 
+        var newRate = Number(localStorage.getItem("rate")) + 1;
+        localStorage.setItem("rate", newRate)
+        var newCount = Number(localStorage.getItem("count")) + 1;
+        localStorage.setItem("count", newCount)
+
+        alert("rate" + localStorage.getItem("rate"))
+        alert("count" + localStorage.getItem("count"))
     }
 
     function second() {
-        var y = 0;
-        var z = 2;
-        var x = +y + +z;
-        document.getElementById("demo").innerHTML = x;
+        var newRate = Number(localStorage.getItem("rate")) + 2;
+        localStorage.setItem("rate", newRate)
+        var newCount = Number(localStorage.getItem("count")) + 1;
+        localStorage.setItem("count", newCount)
+
+        alert("rate" + localStorage.getItem("rate"))
+        alert("count" + localStorage.getItem("count"))
     }
 
     function third() {
-        var y = 0;
-        var z = 3;
-        var x = +y + +z;
-        document.getElementById("demo").innerHTML = x;
+        var newRate = Number(localStorage.getItem("rate")) + 3;
+        localStorage.setItem("rate", newRate)
+
+        var newCount = Number(localStorage.getItem("count")) + 1;
+        localStorage.setItem("count", newCount)
+
+        alert("rate" + localStorage.getItem("rate"))
+        alert("count" + localStorage.getItem("count"))
     }
     function four() {
-        var y = 0;
-        var z = 4;
-        var x = +y + +z;
-        document.getElementById("demo").innerHTML = x;
+        var newRate = Number(localStorage.getItem("rate")) + 4;
+        localStorage.setItem("rate", newRate)
+        var newCount = Number(localStorage.getItem("count")) + 1;
+        localStorage.setItem("count", newCount)
+
+        alert("rate" + localStorage.getItem("rate"))
+        alert("count" + localStorage.getItem("count"))
     }
     function five() {
-        var y = 0;
-        var z = 5;
-        var x = +y + +z;
-        document.getElementById("demo").innerHTML = x;
+        var newRate = Number(localStorage.getItem("rate")) + 5;
+        localStorage.setItem("rate", newRate)
+        var newCount = Number(localStorage.getItem("count")) + 1;
+        localStorage.setItem("count", newCount)
+
+        alert("rate - " + localStorage.getItem("rate"))
+        alert("count - " + localStorage.getItem("count"))
+    }
+
+    function rateCal(){
+        var rate= Number(localStorage.getItem("rate"))/Number(localStorage.getItem("count"))
+        alert("Rating = " +rate )
+    }
+     
+    function start(){
+
+        five();
+        rateCal();
     }
     </script>
-    
-  </head>
-  <body class="ui-body-b ui-body" data-theme="b" style="background-color: #0D0D0D;">
     <div data-role="page" class="ui-body-b" data-theme="b" style="background-color: #0D0D0D;">     
+       
             <div class="ui-grid-b"  data-theme="b">
                 <div class="ui-block-a"></div>
-                <img style="margin-top: 15px; width:200px !important; height:200px !important;" class="ui-block-b cartimage-content"
+                <img style="margin-top: 15px;" class="ui-block-b cartimage-content"
                     src="../Image/mummysdelight.png" alt="food-item">
             </div>
             <div class="ui-grid-b" style="text-align: center;">
@@ -65,7 +94,7 @@
                 <div>
                     <p class="stars">
                         <span>
-                            <a onlick="first()" class="star-1" href="#">1</a>
+                            <a onlick="one()" class="star-2" href="#">1</a>
                             <a onlick="second()" class="star-2" href="#">2</a>
                             <a onlick="third()" class="star-3" href="#">3</a>
                             <a onlick="four()" class="star-4" href="#">4</a>

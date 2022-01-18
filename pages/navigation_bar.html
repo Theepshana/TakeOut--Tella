@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/omarStytle.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+
+  <body>
+    <div data-role="page" id="nav-bar-screen">
+      <div data-role="main" class="ui-content main-page-container">
+        <div
+          data-role="navbar"
+          id="navigation-bar"
+          data-position="fixed"
+          class="nav-bar"
+        >
+          <div id="hamburger-icon" class="hamburger-nav-icon">
+            <img src="../Image/navIcon.png" onclick="handleHamburger()" />
+          </div>
+          <ul class="nav-image-list">
+            <li>
+              <div id="home" class="common-icon-style icon-selected">
+                <img
+                  src="../Image/Home.png"
+                  class="home-icon"
+                  style="float: left"
+                  onclick="selectedNavOption('home')"
+                />
+                <small id="home-label" class="selected-icon-badge">Home</small>
+              </div>
+            </li>
+            <li>
+              <div id="profile" class="common-icon-style">
+                <img
+                  src="../Image/Profile.png"
+                  class="profile-icon"
+                  style="float: left"
+                  onclick="selectedNavOption('profile')"
+                />
+                <small id="profile-label" class="icon-badge">Profile</small>
+              </div>
+            </li>
+            <li>
+              <div id="cart" class="common-icon-style">
+                <img
+                  src="../Image/Buy.png"
+                  class="cart-icon"
+                  style="float: left"
+                  onclick="selectedNavOption('cart')"
+                />
+                <small id="cart-label" class="icon-badge">Cart</small>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      $(document).ready(function () {
+        if (window.innerHeight < window.innerWidth) {
+          document.getElementById("home").className =
+            "common-icon-style-ladscape";
+          document.getElementById("profile").className =
+            "common-icon-style-ladscape";
+          document.getElementById("cart").className =
+            "common-icon-style-ladscape";
+        }
+      });
+
+      function handleHamburger() {
+        document.getElementById("navigation-bar").style.width = "100%";
+        document.getElementById("hamburger-icon").style.display = "none";
+        document.getElementById("home").className = "common-icon-style";
+        document.getElementById("profile").className = "common-icon-style";
+        document.getElementById("cart").className = "common-icon-style";
+
+        if (
+          document
+            .getElementById("home-label")
+            .classList.contains("selected-icon-badge") === true
+        ) {
+          document.getElementById("home").className += " icon-selected";
+        } else if (
+          document
+            .getElementById("profile-label")
+            .classList.contains("selected-icon-badge") === true
+        ) {
+          document.getElementById("profile").className += " icon-selected";
+        } else if (
+          document
+            .getElementById("cart-label")
+            .classList.contains("selected-icon-badge") === true
+        ) {
+          document.getElementById("cart").className += " icon-selected";
+        }
+      }
+
+      function selectedNavOption(el) {
+        var value = el;
+        if (value === "home") {
+          document.getElementById("profile-label").className = "icon-badge";
+          document.getElementById("cart-label").className = "icon-badge";
+          document.getElementById("profile").className = "common-icon-style";
+          document.getElementById("cart").className = "common-icon-style";
+          if (
+            document
+              .getElementById("home")
+              .classList.contains("icon-selected") !== true
+          ) {
+            document.getElementById("home").className += " icon-selected";
+          }
+          document.getElementById("home-label").className =
+            "selected-icon-badge";
+        } else if (value === "profile") {
+          document.getElementById("home-label").className = "icon-badge";
+          document.getElementById("cart-label").className = "icon-badge";
+          document.getElementById("home").className = "common-icon-style";
+          document.getElementById("cart").className = "common-icon-style";
+          document.getElementById("profile").className += " icon-selected";
+          document.getElementById("profile-label").className =
+            "selected-icon-badge";
+        } else if (value === "cart") {
+          document.getElementById("home-label").className = "icon-badge";
+          document.getElementById("profile-label").className = "icon-badge";
+          document.getElementById("home").className = "common-icon-style";
+          document.getElementById("profile").className = "common-icon-style";
+          document.getElementById("cart").className += " icon-selected";
+          document.getElementById("cart-label").className =
+            "selected-icon-badge";
+        }
+
+        if (window.innerHeight < window.innerWidth) {
+          setTimeout(function () {
+            document.getElementById("home").className =
+              "common-icon-style-ladscape";
+            document.getElementById("profile").className =
+              "common-icon-style-ladscape";
+            document.getElementById("cart").className =
+              "common-icon-style-ladscape";
+          }, 1300);
+          setTimeout(function () {
+            document.getElementById("hamburger-icon").style.display = "revert";
+          }, 2000);
+          document.getElementById("navigation-bar").style.width = "3rem";
+        }
+      }
+    </script>
+  </body>
+</html>

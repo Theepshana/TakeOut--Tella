@@ -110,11 +110,18 @@ $(document).on("pagecreate", "#page-one", function() {
     </script>
     </head>
     <body class="ui-body-b ui-body" data-theme="b" style="background-color: #0D0D0D;">
-      <div data-role="page" class="ui-body-b" data-theme="b" style="background-color: #0D0D0D;">     
+      <div data-role="page" class="ui-body-b" data-theme="b" style="background-color: #0D0D0D;">   
+      
         <div class="food-categories">
             </div> 
             <div role="main" class="ui-content ui-body-b ui-body">
         <div role="main" class="ui-content bg">
+          <div>
+            <a onclick="location.href ='./filterPage1.html';" style="background: none;">
+                <img src='../image/Group.png' />
+            </a>
+            </button>
+        </div>  
           <div class="filter-list">
             <div class="left-btn">
             <a id="price-sort" href="#" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-left ui-mini filter-tabs" style="border-radius:  15px;height: 15px;">LKR low to high</a>
@@ -125,7 +132,8 @@ $(document).on("pagecreate", "#page-one", function() {
           </div>
           <p class="food-category-section"> <span class="food-category-header ui-block-a"> Results </span>
             <br>
-          <p class="text-no-item">Sorry ! No Items available</p>
+            <br>
+          <p class="text-no-item" style="margin-top: 40px;">Sorry ! No Items available</p>
         </div>
       </div> 
       </div>
