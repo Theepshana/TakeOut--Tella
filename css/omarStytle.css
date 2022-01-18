@@ -1,41 +1,3 @@
-/* .nav-section {
-  border-radius: 45px;
-  background-color: #252525;
-  height: 2.8rem;
-} */
-/* .nav-icon-class {
-  display: none;
-} */
-
-/* li {
-  float: left;
-} */
-/* ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 4px;
-  overflow: hidden;
-  background-color: #333333;
-} */
-/* li img {
-  display: block;
-  text-align: center;
-  padding: 12px;
-  margin-left: 7px;
-}
-.ui-block-b img:hover {
-  cursor: pointer;
-}
-.navigation-items {
-  margin: 6px 15px 0 0;
-  display: none;
-}
-.icon-selected {
-  width: 98px;
-  height: 45px;
-  border-radius: 15px;
-  background-color: #2a3930;
-} */
 .feedback-icon-style {
   bottom: 2.5rem;
   position: relative;
@@ -46,21 +8,6 @@
   grid-template-columns: 80% 20%;
   margin-top: -2rem;
 }
-/* .nav-icon-clicked {
-  width: unset;
-
-} */
-
-/* .nav-section {
-  width: 45px;
-  height: 45px;
-  border-radius: 45px;
-  background-color: #252525;
-  transition: width 3s;
-}
-.nav-icon-class {
-  margin: 12px 0px 0px -6px;
-} */
 
 /* Nav bar styles */
 
@@ -73,7 +20,9 @@
   height: 3rem;
   border-radius: 36px;
   background-color: #252525;
-  margin-top: 45rem;
+  position: fixed;
+  top: 47rem;
+  width: 100%;
 }
 .nav-image-list {
   position: relative;
@@ -135,27 +84,6 @@
   font-size: 13px;
   margin-left: 7px;
 }
-
-/* @media screen and (orientation: landscape) {
-  .nav-section {
-    width: 45px;
-    height: 45px;
-    border-radius: 45px;
-    transition: width 3s;
-  }
-  .nav-icon-class {
-    margin: 12px 0px 0px -6px;
-    display: unset;
-  }
-  .navigation-items {
-    display: none;
-  }
-} */
-
-/* Qr page */
-/* .qrpage {
-  background-color: black;
-} */
 
 /* Detailed menue style */
 .image {
@@ -389,6 +317,34 @@
   border-color: #252525 !important;
   border-radius: 15px;
 }
+
+/* Adjustments */
+.nav-image-list {
+  background-color: #252525 !important;
+  border-radius: 37px;
+}
+
+/* Restaurent feed back-style */
+.restaurent-feed-back-input-section {
+  height: 7rem;
+  position: relative;
+  top: 10rem;
+}
+
+.restaurent-feed-back-input {
+  border: none !important;
+  text-shadow: none !important;
+  padding-left: 3rem !important;
+  background-color: #252525 !important;
+  color: white !important;
+  height: 2.2rem !important;
+}
+.restaurent-feedback-icon {
+  bottom: 2.5rem;
+  position: relative;
+  right: -1rem;
+}
+
 @media screen and (orientation: landscape) {
   .content {
     height: 33rem;
@@ -431,10 +387,11 @@
     height: 22rem;
   }
   .nav-bar {
-    margin-top: 18rem;
     width: 3rem;
     float: right;
     transition: width 3s;
+    top: 20rem;
+    right: 0;
   }
   /* .common-icon-style {
     display: none;
